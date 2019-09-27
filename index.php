@@ -46,7 +46,13 @@ if (!is_null($events['events'])) {
             //$response = $bot->replyMessage($replyToken, $textMessageBuilder); 
             break; 
           
-           default: 
+          case 'sticker': 
+            $messageID = $event['message']['packageId']; 
+            // Reply message 
+            $respMessage = 'Hello, your Sticker Package ID is '. $messageID; 
+            break;
+           
+          default: 
             $respMessage = 'Please send image only';            
             break;
       } 
