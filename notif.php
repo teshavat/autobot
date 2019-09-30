@@ -3,7 +3,7 @@ define('LINE_API', 'https://notify-api.line.me/api/notify');
 define('LINE_TOKEN', 'zcPwwfIGdE7dOitCULJmK7T3eMP2xmTOFqDsGDX26MI'); 
 
 $message = array( 
-  'message' => 'Hey', 
+  'message' => 'EXCITED!!', 
 ); 
 
 line_notify(LINE_TOKEN, $message); 
