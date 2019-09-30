@@ -17,7 +17,20 @@ $events = json_decode($content, true);
 if (!is_null($events['events'])) { 
   // Loop through each event 
   foreach ($events['events'] as $event) { 
-
+    
+    // Line API send a lot of event type, we interested in message only. 
+    if ($event['type'] == 'join') { 
+      // Get replyToken 
+      $replyToken = $event['replyToken']; 
+      
+      // Greeting 
+      $respMessage = 'Hi guys, I am MR.Robot. You can ask me everything.'; 
+      $httpClient = new CurlHTTPClient($channel_token); 
+      $bot = new LINEBot($httpClient, array('channelSecret' => $channel_secret)); 
+      $textMessageBuilder = new TextMessageBuilder($respMessage); 
+      $response = $bot->replyMessage($replyToken, $textMessageBuilder); 
+    }
+    
     // LINE API send a lot of event type, we interested in message only. 
     if ($event['type'] == 'unfollow') { 
       // ไม่รู้จะทำอะไรต่อ เพรำะว่ำยูสเซอร์อันเฟรนบอทไปแล้ว 
