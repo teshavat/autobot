@@ -19,6 +19,11 @@ if (!is_null($events['events'])) {
   foreach ($events['events'] as $event) { 
     
     // Line API send a lot of event type, we interested in message only. 
+    if ($event['type'] == 'leave') { 
+      // ไม่รู้จะทำอะไรต่อ อำจจะแค่บันทึกไว้ในฐำนข้อมูลว่ำ บอทได้ออกจำกกลุ่มหมำยเลขอะไร 
+    }
+    
+    // Line API send a lot of event type, we interested in message only. 
     if ($event['type'] == 'join') { 
       // Get replyToken 
       $replyToken = $event['replyToken']; 
@@ -27,6 +32,7 @@ if (!is_null($events['events'])) {
       $respMessage = 'Hi guys, I am MR.Robot. You can ask me everything.'; 
       $httpClient = new CurlHTTPClient($channel_token); 
       $bot = new LINEBot($httpClient, array('channelSecret' => $channel_secret)); 
+      
       $textMessageBuilder = new TextMessageBuilder($respMessage); 
       $response = $bot->replyMessage($replyToken, $textMessageBuilder); 
     }
