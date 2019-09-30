@@ -2,9 +2,8 @@
 define('LINE_API', 'https://notify-api.line.me/api/notify'); 
 define('LINE_TOKEN', 'zcPwwfIGdE7dOitCULJmK7T3eMP2xmTOFqDsGDX26MI'); 
 
-$message = array( 
-  'message' => 'EXCITED!!', 
-); 
+$message = array( 'message' => 'ง่วงจังเลย', 'stickerPackageId' => 1, 'stickerId' => 1, );
+//$message = array(   'message' => 'EXCITED!!', ); 
 
 line_notify(LINE_TOKEN, $message); 
 
