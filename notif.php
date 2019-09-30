@@ -2,7 +2,13 @@
 define('LINE_API', 'https://notify-api.line.me/api/notify'); 
 define('LINE_TOKEN', 'zcPwwfIGdE7dOitCULJmK7T3eMP2xmTOFqDsGDX26MI'); 
 
-$message = array( 'message' => 'ON fire!!!', 'stickerPackageId' => 11539, 'stickerId' => 52114142, );
+$message = array( 'message' => 'ภาพสวยๆ', 'imageThumbnail' => 'https://raw.githubusercontent.com/platoosom/line-notify-example/master/unsplash-thumbnail.jpg', 'imageFullsize' => 'https://raw.githubusercontent.com/platoosom/line-notify-example/master/unsplash-fullsize.jpg', );
+
+//$message = array( 'message' => 'sleepy', 'stickerPackageId' => 1, 'stickerId' => 1, );
+
+//not Sending out
+//$message = array( 'message' => 'ON fire!!!', 'stickerPackageId' => 11539, 'stickerId' => 52114142, );
+
 //$message = array(   'message' => 'EXCITED!!', ); 
 
 line_notify(LINE_TOKEN, $message); 
