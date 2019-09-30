@@ -82,6 +82,13 @@ if (!is_null($events['events'])) {
             $respMessage = 'Hello, your address is '. $address; 
             break;
           
+          case 'file': 
+            $messageID = $event['message']['id']; 
+            $fileName = $event['message']['fileName']; 
+            // Reply message 
+            $respMessage = 'Hello, your file ID is '. $messageID . ' and file name is '. $fileName; 
+            break;
+          
           default: 
             $respMessage = 'Please send image only';            
             break;
