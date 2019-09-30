@@ -64,6 +64,18 @@ if (!is_null($events['events'])) {
             $respMessage = 'Hello, your video ID is '. $messageID; 
             break;
           
+          case 'audio': 
+            $messageID = $event['message']['id']; 
+            // Create audio file on server. 
+            $fileID = $event['message']['id']; 
+            $response = $bot->getMessageContent($fileID); 
+            $fileName = 'linebot.m4a'; 
+            $file = fopen($fileName, 'w'); 
+            fwrite($file, $response->getRawBody()); 
+            // Reply message 
+            $respMessage = 'Hello, your audio ID is '. $messageID; 
+            break;
+          
           default: 
             $respMessage = 'Please send image only';            
             break;
