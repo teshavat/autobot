@@ -18,6 +18,12 @@ if (!is_null($events['events'])) {
   // Loop through each event 
   foreach ($events['events'] as $event) { 
 
+    // LINE API send a lot of event type, we interested in message only. 
+    if ($event['type'] == 'unfollow') { 
+      // ไม่รู้จะทำอะไรต่อ เพรำะว่ำยูสเซอร์อันเฟรนบอทไปแล้ว 
+      // บำงทีอำจจะแค่นับจำนวนคนอันเฟรนบอท แล้วบอกจำนวนให้กำรตลำดทรำบ 
+    }
+    
     // Line API send a lot of event type, we interested in message only. 
     if ($event['type'] == 'follow') { 
       // Get replyToken 
