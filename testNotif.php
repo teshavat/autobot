@@ -31,3 +31,5 @@ function line_notify($token, $message) {
   $result = curl_exec( $cURL ); 
   curl_close( $cURL ); 
 }
+
+echo("SuperGiants");
