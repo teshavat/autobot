@@ -2,7 +2,7 @@
 define('LINE_API', 'https://notify-api.line.me/api/notify'); 
 
 $message = array( 
-  'message' => 'Hello สวัสดีครับ', 
+  'message' => 'Hello', 
 ); 
 
 $tokens = file_get_contents('tokens.json'); 
@@ -10,7 +10,9 @@ $tokens = json_decode($tokens, true);
 
 foreach($tokens as $token){ 
   line_notify($token, $message); 
+  echo("token=",$token,", message="+$message);
 } 
+echo("----");
 
 function line_notify($token, $message) { 
   $header = array( 
