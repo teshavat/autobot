@@ -1,7 +1,7 @@
 <?php 
 define('LINE_API', 'https://notify-api.line.me/api/notify'); 
 
-$message = array( 'message' => 'Hi', 'imageThumbnail' => 'https://raw.githubusercontent.com/platoosom/line-notify-example/master/unsplash-thumbnail.jpg', 'imageFullsize' => 'https://raw.githubusercontent.com/platoosom/line-notify-example/master/unsplash-fullsize.jpg', ); $
+$message = array( 'message' => 'Hi', 'imageThumbnail' => 'https://raw.githubusercontent.com/platoosom/line-notify-example/master/unsplash-thumbnail.jpg', 'imageFullsize' => 'https://raw.githubusercontent.com/platoosom/line-notify-example/master/unsplash-fullsize.jpg', );
 //$message = array( 'message' => 'Hi', 'stickerPackageId' => 1, 'stickerId' => 5, );
 //$message = array(   'message' => 'Hello. <a href="simpelgroup.com>SImpel</a>', ); 
 
