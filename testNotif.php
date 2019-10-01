@@ -8,9 +8,10 @@ $message = array(
 $tokens = file_get_contents('tokens.json'); 
 $tokens = json_decode($tokens, true); 
 
+echo("----");
 foreach($tokens as $token){ 
   line_notify($token, $message); 
-  echo("token=",$token,", message=",$message);
+  echo($token);
 } 
 echo("----");
 
