@@ -28,3 +28,6 @@ function line_notify($token, $message) {
   curl_setopt( $cURL, CURLOPT_FOLLOWLOCATION, 1); 
   curl_setopt($cURL, CURLOPT_HTTPHEADER, $header); 
   curl_setopt( $cURL, CURLOPT_RETURNTRANSFER, 1);
+  $result = curl_exec( $cURL ); 
+  curl_close( $cURL ); 
+}
