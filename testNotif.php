@@ -2,7 +2,7 @@
 define('LINE_API', 'https://notify-api.line.me/api/notify'); 
 
 $message = array( 
-  'message' => 'Hello', 
+  'message' => 'Hello. สวัสดีครับ', 
 ); 
 
 $tokens = file_get_contents('tokens.json'); 
