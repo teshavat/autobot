@@ -10,7 +10,7 @@ $tokens = json_decode($tokens, true);
 
 foreach($tokens as $token){ 
   line_notify($token, $message); 
-  echo("token=",$token,", message="+$message);
+  echo("token=",$token,", message=",$message);
 } 
 echo("----");
 
